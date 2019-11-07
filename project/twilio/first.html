@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lalala</title>
+    <link rel="stylesheet" href="jiemian.css" type="text/css">
+</head>
+
+<body>
+    <div class="main">
+        <span>
+            <h2>你好今天</h2>
+        </span>
+        <div class="vector">
+            <div class="table">
+                <form id="my_form" method="get">
+                    <table>
+                        <tr>
+                            <td>account_sid:</td>
+                            <td>
+                                <input type="text" class="text" name="account_sid" id="ac">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>auth_token:</td>
+                            <td>
+                                <input type="text" class="text" name="auth_token" id="au">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>place:</td>
+                            <td>
+                                <input type="text" class="text" name="place" id="pl">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>tophone:</td>
+                            <td>
+                                <input type="text" class="text" name="tophone" id="tp">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>fromphone:</td>
+                            <td>
+                                <input type="text" class="text" name="fromphone" id="fp">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" class="text" value="注册" name="submit" id="submit">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+	
+	$('#submit').click(function(){
+		$.ajax({
+			url:'deal.php',
+			async:false,
+			type:'GET',
+			data:{
+                       	 	account_sid: $('#ac').val(),
+                       	 	auth_token:$('#au').val(),
+                        	place: $('#pl').val(),
+                        	tophone:$('#tp').val(),
+                        	fromphone: $('#fp').val()
+                    	},
+			success:function(){
+				location.href="result.html";
+				alert('登陆成功！');
+				},
+			error:function(){
+				alert('登陆成功！');
+				}
+			});
+		});
+</script>
+
+</html>

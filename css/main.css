@@ -1,0 +1,143 @@
+a {
+	color: #333;
+	text-decoration: none;
+	position: relative;
+}
+
+a:hover {
+	color: #f55;
+}
+
+#header {
+	width: 100%;
+}
+
+#header .navs {
+	height: 80px;
+	width: 100%;
+	line-height: 80px;
+}
+
+#header .navs .logo {
+	float: left;
+	display: block;
+	margin: 0 10px;
+	font-family: "Comic Sans MS";
+    color: #4682B4;
+    text-shadow: 0 0 20px #fdec84,
+            10px -10px 30px #ffae35,
+            20px -20px 40px #ec760c,
+            -20px -60px 50px #cd4607,
+            0px -80px 60px #973717,
+            10px -40px 70px #451b0e;
+	font-size: 50px;
+}
+
+#header #switch {
+	display: none;
+}
+
+#header .navs .menu {
+	float: right;
+}
+
+#header .navs .menu li {
+	display: inline;
+}
+
+#header .navs .menu li a {
+	color: #4682B4;
+	padding: 0 10px;
+	font-size: 20px;
+	text-decoration: none;
+	transition: .2s;
+	z-index: 200000;
+}
+
+#header .navs .menu li a:hover {
+	text-shadow: 1px 1px 1px #295
+}
+
+#header .navs .menu li.current a {
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff
+}
+
+@media ( max-width :700px) {
+	#header #switch {
+		display: block;
+		float: right;
+		color: #4682B4;
+		padding: 0 10px;
+		margin: 0 10px 0 0;
+		font-size: 20px;
+		cursor: pointer;
+		
+	}
+	#header .navs .menu {
+		position: absolute;
+		right: 10px;
+		top: 80px;
+		display: none;
+		height: 200px;
+		width: 180px;
+		text-align: center;
+		z-index: 200000;
+		color: black
+	}
+	#header .navs .menu li {
+		line-height: 50px;
+		z-index: 200000
+	}
+	#header .navs .menu li a {
+		background: #99CCCC;
+		display: block;
+		font-size: 16px;
+		width: 100%;
+		padding: 0;
+		z-index: 200000;
+		color: #003300;
+		border-bottom:0.5px solid black
+	}
+	#header .navs .menu li:last-child a{
+		border-bottom:none ;
+	}
+	#header .navs .menu li a:hover, #header .navs .menu li.current a {
+		z-index: 200000
+	}
+}
+
+.bg {
+	background: -webkit-linear-gradient(rgba(173, 216, 230, 0.5),
+		rgba(64, 224, 208, 0.5), rgba(127, 255, 170, 0.5));
+	/* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(rgba(173, 216, 230, 0.5),
+		rgba(64, 224, 208, 0.5), rgba(127, 255, 170, 0.5));
+	/* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(rgba(173, 216, 230, 0.5),
+		rgba(64, 224, 208, 0.5), rgba(127, 255, 170, 0.5));
+	/* Firefox 3.6 - 15 */
+	background: linear-gradient(rgba(173, 216, 230, 0.5),
+		rgba(64, 224, 208, 0.5), rgba(127, 255, 170, 0.5)); /* 标准的语法 */
+	background-repeat: no-repeat;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 100000;
+}
+
+.snow-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 100001;
+}
+
+#content {
+	z-index: -1
+}

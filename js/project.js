@@ -1,0 +1,11 @@
+/**
+ * 
+ */
+$(document).ready(function(){
+	 $("#switch").click(function(){
+  $(".case_menu").toggle(300);
+  });
+	 $("#twilio").click(function(){
+		 window.location.href="project/twilio/first.html";
+	 });
+});
